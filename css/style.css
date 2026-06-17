@@ -1,0 +1,170 @@
+/* ===========================================================================
+   Julian Terstegge — personal academic website
+   Minimal single-column layout (inspired by fuzhiyu.me)
+   =========================================================================== */
+
+:root {
+  --ink:    #1c1c1c;   /* body text            */
+  --navy:   #00274c;   /* Michigan navy — name & headings */
+  --link:   #11539e;   /* links                */
+  --link-h: #00274c;   /* link hover           */
+  --muted:  #6f6f6f;   /* secondary text       */
+  --rule:   #e7e7e7;   /* hairline rules       */
+  --maize:  #ffcb05;   /* Michigan maize accent */
+  --maxw:   760px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0 auto;
+  max-width: var(--maxw);
+  padding: 2.2rem 1.25rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+               Arial, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+a:hover { color: var(--link-h); border-bottom-color: currentColor; }
+
+/* ---- Site header / navigation ------------------------------------------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--navy);
+}
+.site-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: var(--navy);
+  border-bottom: none;
+}
+.site-title:hover { color: var(--navy); border-bottom: none; }
+
+.site-nav { display: flex; gap: 1.4rem; font-size: 1.02rem; }
+.site-nav a { color: var(--muted); border-bottom: none; padding-bottom: 2px; }
+.site-nav a:hover { color: var(--navy); border-bottom: none; }
+.site-nav a.active {
+  color: var(--navy);
+  font-weight: 600;
+  border-bottom: 2px solid var(--maize);
+}
+
+/* ---- Home: profile block ------------------------------------------------ */
+.profile {
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+}
+.profile img {
+  width: 190px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.profile h1 {
+  margin: .1rem 0 .15rem;
+  font-size: 1.9rem;
+  color: var(--navy);
+  line-height: 1.15;
+}
+.profile .subtitle { margin: 0; color: var(--ink); font-weight: 600; }
+.profile .affil { margin: .1rem 0 .9rem; color: var(--muted); }
+.profile p.bio { margin: .6rem 0 0; }
+
+/* inline quick-links row */
+.quicklinks {
+  margin-top: 1rem;
+  font-size: .97rem;
+  line-height: 1.9;
+}
+.quicklinks a { white-space: nowrap; }
+.quicklinks .sep { color: var(--rule); margin: 0 .55rem; }
+
+/* ---- Section headings --------------------------------------------------- */
+section { margin-top: 2.6rem; }
+h2 {
+  font-size: 1.18rem;
+  color: var(--navy);
+  margin: 0 0 1rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---- Publication list --------------------------------------------------- */
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-list > li { margin-bottom: 1.5rem; }
+.pub-title { font-weight: 600; color: var(--ink); }
+.pub-meta  { color: var(--muted); font-size: .96rem; }
+.pub-meta em { font-style: italic; }
+.pub-links { font-size: .92rem; margin-top: .15rem; }
+.pub-links a { white-space: nowrap; }
+.pub-links .sep { color: var(--rule); margin: 0 .5rem; }
+
+/* ---- Discussions list --------------------------------------------------- */
+.discussion-intro { color: var(--muted); margin: -.4rem 0 1.8rem; }
+.discussion-list {
+  list-style: none;
+  counter-reset: disc;
+  margin: 0;
+  padding: 0;
+}
+.discussion-list > li {
+  position: relative;
+  counter-increment: disc;
+  padding-left: 2.4rem;
+  margin-bottom: 1.7rem;
+}
+.discussion-list > li::before {
+  content: counter(disc) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.disc-paper   { font-weight: 600; color: var(--ink); }
+.disc-authors { color: var(--ink); }
+.disc-venue   { color: var(--muted); font-style: italic; }
+.disc-links   { margin-top: .15rem; font-size: .95rem; }
+
+/* ---- Footer ------------------------------------------------------------- */
+.site-footer {
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .88rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+/* ---- Responsive --------------------------------------------------------- */
+@media (max-width: 560px) {
+  body { font-size: 16px; padding-top: 1.6rem; }
+  .profile { flex-direction: column; align-items: center; text-align: center; }
+  .profile img { width: 150px; }
+  .quicklinks { text-align: center; }
+  .site-header { justify-content: center; text-align: center; }
+}
