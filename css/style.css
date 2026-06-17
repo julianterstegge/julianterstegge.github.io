@@ -119,6 +119,36 @@ h2 {
 .pub-links a { white-space: nowrap; }
 .pub-links .sep { color: var(--rule); margin: 0 .5rem; }
 
+/* Abstract toggle — styled to match the .pub-links links */
+.abstract-toggle {
+  font: inherit;
+  color: var(--link);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.abstract-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
+
+/* Collapsible abstract panel */
+.abstract {
+  display: none;
+  margin-top: .6rem;
+  padding: .65rem .85rem;
+  background: #f6f7f9;
+  border-left: 3px solid var(--navy);
+  border-radius: 0 4px 4px 0;
+  font-size: .95rem;
+  line-height: 1.62;
+  color: var(--ink);
+  max-width: 64ch;
+}
+.abstract.open { display: block; }
+.abstract p { margin: 0; }
+
 /* ---- Discussions list --------------------------------------------------- */
 .discussion-intro { color: var(--muted); margin: -.4rem 0 1.8rem; }
 .discussion-list {

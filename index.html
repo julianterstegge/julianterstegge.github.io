@@ -61,7 +61,11 @@
           Forthcoming, <em>Journal of Financial Economics</em></span>
           <div class="pub-links">
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913715" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
-            <a href="https://carbonvix.org" target="_blank" rel="noopener noreferrer">carbonvix.org</a>
+            <a href="https://carbonvix.org" target="_blank" rel="noopener noreferrer">carbonvix.org</a><span class="sep">·</span>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-carbonvix">Abstract</button>
+          </div>
+          <div class="abstract" id="abs-carbonvix">
+            <p>We study the effects of carbon price uncertainty on firms' decisions to decarbonize their operations. We first use information on the pricing of options on emission allowances in the European Emissions Trading System to create the Carbon VIX, a market-based high-frequency measure of carbon price uncertainty. Carbon price uncertainty is high, varies substantially over time, and experiences persistent shocks around major climate policy events. To explore the effects of carbon price uncertainty on expected aggregate decarbonization investments, we analyze its effect on the stock returns of firms that help other businesses decarbonize. To identify these "carbon solution providers," we extract common types of decarbonization investments from a large survey of firms, and then identify companies that offer the associated goods and services. We find that the stock returns of these carbon solution providers vary positively with carbon prices, but negatively with carbon price uncertainty. The effect of increases in carbon price uncertainty on our proxy for expected decarbonization investments is economically large and of similar magnitude as the effect of declines in carbon prices. These findings support predictions from real options theory that firms may delay investments in decarbonization when faced with uncertainty about the future costs of emissions.</p>
           </div>
         </li>
       </ul>
@@ -75,13 +79,21 @@
           <span class="pub-meta">with Guido Baltussen and Paul Whelan<br>
           Revise &amp; Resubmit, <em>Review of Financial Studies</em></span>
           <div class="pub-links">
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4562800" target="_blank" rel="noopener noreferrer">SSRN</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4562800" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-payoff">Abstract</button>
+          </div>
+          <div class="abstract" id="abs-payoff">
+            <p>Most U.S. equity index derivatives expire at the market open on the 3rd Friday of each month. We show that equity prices at the open on 3rd Fridays are systematically biased upward and fully reverse by midday. Thus, call and futures payoffs are inflated while put payoffs are deflated, transferring approximately $2.5 billion annually. This bias stems from predictable changes in option dealers' inventory delta. The aggregate delta of dealers' option positions drifts down into 3rd Friday derivative expiry, generating an incentive to buy equities. Dealer delta drift predicts overnight equity returns into 3rd Friday expirations, and no other days.</p>
           </div>
         </li>
         <li>
           <span class="pub-title">Intermediary Option Pricing</span>
           <div class="pub-links">
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877762" target="_blank" rel="noopener noreferrer">SSRN</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877762" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-intermediary">Abstract</button>
+          </div>
+          <div class="abstract" id="abs-intermediary">
+            <p>S&amp;P 500 options earn negative returns mainly overnight. I link this timing to dealer gap risk: inventory risk from large equity price moves when overnight equity illiquidity limits delta hedging. Using CBOE trade data, I estimate dealer inventories and introduce shadow gamma, the curvature of option payoffs after a crash, as a simple measure of gap risk exposure. Dealers are short this crash-state curvature, and options with greater shadow gamma earn more negative overnight returns, especially when dealer exposure is high. The rise of overnight equity trading around 2006 reduced within-week premia relative to weekends, consistent with a causal liquidity channel.</p>
           </div>
         </li>
       </ul>
@@ -102,6 +114,19 @@
     <span>Julian Terstegge</span>
     <span>University of Michigan, Ross School of Business</span>
   </footer>
+
+  <script>
+    // Expand/collapse paper abstracts
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.abstract-toggle');
+      if (!btn) return;
+      var panel = btn.closest('li').querySelector('.abstract');
+      if (!panel) return;
+      var open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Hide abstract' : 'Abstract';
+    });
+  </script>
 
 </body>
 </html>
