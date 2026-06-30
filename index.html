@@ -35,9 +35,10 @@
         <p class="subtitle">Assistant Professor of Finance</p>
         <p class="affil">Stephen M. Ross School of Business, University of Michigan</p>
         <p class="bio">
-          My research is in asset pricing and financial intermediation. I often use
-          asset prices to infer otherwise hard-to-measure economic quantities, such as
-          Carbon Price Uncertainty.
+          I work on asset pricing and financial intermediation. My work often uses
+          derivatives markets to measure economic quantities, such as
+          <a href="#abs-intermediary" class="reveal-abstract" data-target="abs-intermediary">Intermediary Inventory Risk</a>,
+          and <a href="#abs-carbonvix" class="reveal-abstract" data-target="abs-carbonvix">Carbon Price Uncertainty</a>.
         </p>
         <p class="quicklinks">
           <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6129630" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
@@ -121,6 +122,23 @@
       var open = panel.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.textContent = open ? 'Hide abstract' : 'Abstract';
+    });
+
+    // Inline bio links that reveal, scroll to, and highlight a paper's abstract
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('.reveal-abstract');
+      if (!link) return;
+      e.preventDefault();
+      var panel = document.getElementById(link.getAttribute('data-target'));
+      if (!panel) return;
+      var li = panel.closest('li');
+      panel.classList.add('open');
+      var btn = li && li.querySelector('.abstract-toggle');
+      if (btn) { btn.setAttribute('aria-expanded', 'true'); btn.textContent = 'Hide abstract'; }
+      (li || panel).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      panel.classList.remove('flash');
+      void panel.offsetWidth; // restart the animation
+      panel.classList.add('flash');
     });
   </script>
 

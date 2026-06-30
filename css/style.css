@@ -149,6 +149,19 @@ h2 {
 .abstract.open { display: block; }
 .abstract p { margin: 0; }
 
+/* Brief highlight when an abstract is revealed from an inline bio link */
+@keyframes abstract-flash {
+  0%   { background: #f6f7f9; }
+  15%  { background: #fff3bf; }
+  40%  { background: #f6f7f9; }
+  60%  { background: #fff3bf; }
+  100% { background: #f6f7f9; }
+}
+.abstract.flash { animation: abstract-flash 1.4s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .abstract.flash { animation: none; }
+}
+
 /* ---- Discussions list --------------------------------------------------- */
 .discussion-intro { color: var(--muted); margin: -.4rem 0 1.8rem; }
 .discussion-list {
