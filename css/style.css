@@ -88,7 +88,10 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 }
 .profile .subtitle { margin: 0; color: var(--ink); font-weight: 600; }
 .profile .affil { margin: .1rem 0 .9rem; color: var(--muted); }
-.profile p.bio { margin: .6rem 0 0; }
+.profile .bio { margin: .6rem 0 0; }
+.bio p { margin: 0; }
+.bio .research-areas { margin: .35rem 0 .6rem; padding-left: 1.35rem; }
+.bio .research-areas li { margin: .12rem 0; }
 
 /* inline quick-links row */
 .quicklinks {
