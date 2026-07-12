@@ -4,3 +4,6 @@ Thumbs.db
 desktop.ini
 *.swp
 .vscode/
+
+# Local archive of superseded files — not published
+assets/papers/_archive/
