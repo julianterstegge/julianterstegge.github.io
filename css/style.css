@@ -121,6 +121,7 @@ h2 {
 .pub-links { font-size: .92rem; margin-top: .15rem; }
 .pub-links a { white-space: nowrap; }
 .pub-links .sep { color: var(--rule); margin: 0 .5rem; }
+.pub-links .press-label { color: var(--muted); }
 
 /* Abstract toggle — styled to match the .pub-links links */
 .abstract-toggle {
