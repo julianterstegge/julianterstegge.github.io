@@ -9,7 +9,8 @@ Static HTML/CSS, no build step. Hosted on GitHub Pages.
 - `index.html` — Home (bio, links, papers)
 - `discussions.html` — conference & seminar discussions, with slides
 - `css/style.css` — single stylesheet
-- `assets/` — `img/` headshot, `cv/`, `papers/`, `discussions/` (PDFs)
+- `assets/` — `img/` headshot, `cv/`, `papers/`, `discussions/` (PDFs),
+  `figures/` (each paper's Figure 1 as PNG, shown by the "Figure 1" toggles)
 
 ## Preview locally
 ```

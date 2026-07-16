@@ -118,13 +118,22 @@ h2 {
 .pub-title { font-weight: 600; color: var(--ink); }
 .pub-meta  { color: var(--muted); font-size: .96rem; }
 .pub-meta em { font-style: italic; }
+
+/* Co-author links — deliberately mellow: keep the muted text color, signal
+   "link" only through a faint dotted underline; full link color on hover */
+.pub-meta a {
+  color: inherit;
+  border-bottom: 1px dotted #bcbcbc;
+}
+.pub-meta a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 .pub-links { font-size: .92rem; margin-top: .15rem; }
 .pub-links a { white-space: nowrap; }
 .pub-links .sep { color: var(--rule); margin: 0 .5rem; }
 .pub-links .press-label { color: var(--muted); }
 
-/* Abstract toggle — styled to match the .pub-links links */
-.abstract-toggle {
+/* Abstract & figure toggles — styled to match the .pub-links links */
+.abstract-toggle,
+.figure-toggle {
   font: inherit;
   color: var(--link);
   background: none;
@@ -135,7 +144,8 @@ h2 {
   vertical-align: baseline;
   white-space: nowrap;
 }
-.abstract-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
+.abstract-toggle:hover,
+.figure-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
 
 /* Collapsible abstract panel */
 .abstract {
@@ -152,6 +162,19 @@ h2 {
 }
 .abstract.open { display: block; }
 .abstract p { margin: 0; }
+
+/* Collapsible Figure 1 panel — same frame as the abstract */
+.figure-panel {
+  display: none;
+  margin-top: .6rem;
+  padding: .8rem .85rem;
+  background: #f6f7f9;
+  border-left: 3px solid var(--navy);
+  border-radius: 0 4px 4px 0;
+  max-width: 64ch;
+}
+.figure-panel.open { display: block; }
+.figure-panel img { display: block; width: 100%; height: auto; }
 
 /* Brief highlight when an abstract is revealed from an inline bio link */
 @keyframes abstract-flash {
