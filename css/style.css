@@ -90,8 +90,16 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 .profile .affil { margin: .1rem 0 .9rem; color: var(--muted); }
 .profile .bio { margin: .6rem 0 0; }
 .bio p { margin: 0; }
-.bio .research-areas { margin: .35rem 0 .6rem; padding-left: 1.35rem; }
-.bio .research-areas li { margin: .12rem 0; }
+.bio p + p { margin-top: .55rem; }
+
+/* Superscript paper references in the bio — click scrolls to the paper and
+   reveals its abstract (see the .reveal-abstract script in index.html) */
+.bio sup {
+  font-size: .72em;
+  line-height: 0;   /* keep the superscript from stretching the line */
+  letter-spacing: .02em;
+}
+.bio sup a { white-space: nowrap; }
 
 /* inline quick-links row */
 .quicklinks {
