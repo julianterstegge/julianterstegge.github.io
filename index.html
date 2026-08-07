@@ -51,7 +51,7 @@
         <div class="bio">
           <p>My research</p>
           <ul class="research-areas">
-            <li>examines how financial intermediation shapes asset market outcomes<sup><a href="#paper-payoff" class="reveal-abstract" data-target="abs-payoff" title="The Derivative Payoff Bias">a</a>,<a href="#paper-intermediary" class="reveal-abstract" data-target="abs-intermediary" title="Intermediary Option Pricing">b</a></sup></li>
+            <li>examines how financial intermediation shapes asset market outcomes<sup><a href="#paper-intermediary" class="reveal-abstract" data-target="abs-intermediary" title="Intermediary Option Pricing">a</a>,<a href="#paper-payoff" class="reveal-abstract" data-target="abs-payoff" title="The Derivative Payoff Bias">b</a></sup></li>
             <li>uses asset prices to study real outcomes<sup><a href="#paper-carbonvix" class="reveal-abstract" data-target="abs-carbonvix" title="Carbon VIX: Carbon Price Uncertainty and Decarbonization Investments">c</a></sup></li>
           </ul>
           <p>I received my PhD from Copenhagen Business School in 2025.</p>
@@ -65,6 +65,50 @@
         </p>
       </div>
     </div>
+
+    <section id="working-papers">
+      <h2>Working Papers</h2>
+      <ul class="pub-list">
+        <li id="paper-intermediary">
+          <span class="pub-title">Intermediary Option Pricing</span>
+          <div class="pub-links">
+            <a href="assets/papers/intermediary_option_pricing.pdf" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">·</span>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-intermediary">Abstract</button><span class="sep">·</span>
+            <button type="button" class="figure-toggle" aria-expanded="false" aria-controls="fig-intermediary">Figure 1</button><span class="sep">·</span>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877762" target="_blank" rel="noopener noreferrer">SSRN</a>
+          </div>
+          <div class="abstract" id="abs-intermediary">
+            <p>I exploit nights to show that intermediary inventory risk drives the option risk premium. Nights raise dealers' inventory risk on a schedule unrelated to economy-wide risk aversion, because the daily closure of regular equity markets lowers liquidity and impedes delta-hedge adjustments. I quantify dealers' "gap risk" and find that it predicts S&amp;P 500 option returns overnight (when the friction binds) relative to the same options' day returns. After overnight equity trading emerged around 2006, loosening the friction on weeknights but not weekends, the intra-week option premium attenuated by nearly two thirds, especially in options where dealers' inventory is concentrated.</p>
+          </div>
+          <div class="figure-panel" id="fig-intermediary">
+            <p class="figure-headline">The emergence of overnight equity trading permanently changed the option risk premium.</p>
+            <img src="assets/figures/fig_intermediary_option_pricing.png" alt="Figure 1 of the paper: cumulative returns of S&amp;P 500 put options, weeknights versus weekends, 1996 to 2023.">
+          </div>
+        </li>
+        <li id="paper-payoff">
+          <span class="pub-title">The Derivative Payoff Bias</span><br>
+          <span class="pub-meta">with <a href="https://www.eur.nl/en/people/guido-baltussen" target="_blank" rel="noopener noreferrer">Guido Baltussen</a> and <a href="https://sites.google.com/view/paulwhelan/home" target="_blank" rel="noopener noreferrer">Paul Whelan</a><br>
+          Revise &amp; Resubmit, <em>Review of Financial Studies</em></span>
+          <div class="pub-links">
+            <a href="assets/papers/derivative_payoff_bias.pdf" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">·</span>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-payoff">Abstract</button><span class="sep">·</span>
+            <button type="button" class="figure-toggle" aria-expanded="false" aria-controls="fig-payoff">Figure 1</button><span class="sep">·</span>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4562800" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
+            <span class="press-label">Press:</span>
+            <a href="https://www.bloomberg.com/news/articles/2023-09-27/s-p-500-options-quirk-mints-billions-stirring-manipulation-talk" target="_blank" rel="noopener noreferrer">Bloomberg</a>,
+            <a href="https://www.barrons.com/articles/triple-witching-day-options-manipulated-dd8dd5ae" target="_blank" rel="noopener noreferrer">Barron’s</a>,
+            <a href="https://www.risk.net/investing/7957783/witching-day-price-spikes-point-to-options-market-manipulation-study" target="_blank" rel="noopener noreferrer">Risk</a>
+          </div>
+          <div class="abstract" id="abs-payoff">
+            <p>Most U.S. equity index derivatives expire at the market open on the 3rd Friday of each month. We show that equity prices at the open on 3rd Fridays are systematically biased upward and fully reverse by midday. Thus, call and futures payoffs are inflated while put payoffs are deflated, transferring approximately $2.5 billion annually. This bias stems from predictable changes in option dealers' inventory delta. The aggregate delta of dealers' option positions drifts down into 3rd Friday derivative expiry, generating an incentive to buy equities. Dealer delta drift predicts overnight equity returns into 3rd Friday expirations, and no other days.</p>
+          </div>
+          <div class="figure-panel" id="fig-payoff">
+            <p class="figure-headline">The S&amp;P 500 spikes exactly when derivative payoffs are calculated and fully reverts thereafter.</p>
+            <img src="assets/figures/fig_derivative_payoff_bias.png" alt="Cumulative intraday log returns of S&amp;P 500 E-mini futures around 3rd Friday market open versus all other days: a spike into the 9:30 a.m. open on 3rd Fridays that fully reverses by midday.">
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section id="publications">
       <h2>Publications</h2>
@@ -88,50 +132,6 @@
           <div class="figure-panel" id="fig-carbonvix">
             <p class="figure-headline">The Carbon VIX measures carbon price uncertainty and spikes around major events.</p>
             <img src="assets/figures/fig_carbon_vix.png" alt="Figure 1 of the paper: the Carbon VIX from 2013 to 2023, annotated with major market events.">
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="working-papers">
-      <h2>Working Papers</h2>
-      <ul class="pub-list">
-        <li id="paper-payoff">
-          <span class="pub-title">The Derivative Payoff Bias</span><br>
-          <span class="pub-meta">with <a href="https://www.eur.nl/en/people/guido-baltussen" target="_blank" rel="noopener noreferrer">Guido Baltussen</a> and <a href="https://sites.google.com/view/paulwhelan/home" target="_blank" rel="noopener noreferrer">Paul Whelan</a><br>
-          Revise &amp; Resubmit, <em>Review of Financial Studies</em></span>
-          <div class="pub-links">
-            <a href="assets/papers/derivative_payoff_bias.pdf" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">·</span>
-            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-payoff">Abstract</button><span class="sep">·</span>
-            <button type="button" class="figure-toggle" aria-expanded="false" aria-controls="fig-payoff">Figure 1</button><span class="sep">·</span>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4562800" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
-            <span class="press-label">Press:</span>
-            <a href="https://www.bloomberg.com/news/articles/2023-09-27/s-p-500-options-quirk-mints-billions-stirring-manipulation-talk" target="_blank" rel="noopener noreferrer">Bloomberg</a>,
-            <a href="https://www.barrons.com/articles/triple-witching-day-options-manipulated-dd8dd5ae" target="_blank" rel="noopener noreferrer">Barron’s</a>,
-            <a href="https://www.risk.net/investing/7957783/witching-day-price-spikes-point-to-options-market-manipulation-study" target="_blank" rel="noopener noreferrer">Risk</a>
-          </div>
-          <div class="abstract" id="abs-payoff">
-            <p>Most U.S. equity index derivatives expire at the market open on the 3rd Friday of each month. We show that equity prices at the open on 3rd Fridays are systematically biased upward and fully reverse by midday. Thus, call and futures payoffs are inflated while put payoffs are deflated, transferring approximately $2.5 billion annually. This bias stems from predictable changes in option dealers' inventory delta. The aggregate delta of dealers' option positions drifts down into 3rd Friday derivative expiry, generating an incentive to buy equities. Dealer delta drift predicts overnight equity returns into 3rd Friday expirations, and no other days.</p>
-          </div>
-          <div class="figure-panel" id="fig-payoff">
-            <p class="figure-headline">The S&amp;P 500 spikes exactly when derivative payoffs are calculated and fully reverts thereafter.</p>
-            <img src="assets/figures/fig_derivative_payoff_bias.png" alt="Cumulative intraday log returns of S&amp;P 500 E-mini futures around 3rd Friday market open versus all other days: a spike into the 9:30 a.m. open on 3rd Fridays that fully reverses by midday.">
-          </div>
-        </li>
-        <li id="paper-intermediary">
-          <span class="pub-title">Intermediary Option Pricing</span>
-          <div class="pub-links">
-            <a href="assets/papers/intermediary_option_pricing.pdf" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">·</span>
-            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-intermediary">Abstract</button><span class="sep">·</span>
-            <button type="button" class="figure-toggle" aria-expanded="false" aria-controls="fig-intermediary">Figure 1</button><span class="sep">·</span>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877762" target="_blank" rel="noopener noreferrer">SSRN</a>
-          </div>
-          <div class="abstract" id="abs-intermediary">
-            <p>I exploit nights to show that intermediary inventory risk drives the option risk premium. Nights raise dealers' inventory risk on a schedule unrelated to economy-wide risk aversion, because the daily closure of regular equity markets lowers liquidity and impedes delta-hedge adjustments. I quantify dealers' "gap risk" and find that it predicts S&amp;P 500 option returns overnight (when the friction binds) relative to the same options' day returns. After overnight equity trading emerged around 2006, loosening the friction on weeknights but not weekends, the intra-week option premium attenuated by nearly two thirds, especially in options where dealers' inventory is concentrated.</p>
-          </div>
-          <div class="figure-panel" id="fig-intermediary">
-            <p class="figure-headline">The emergence of overnight equity trading permanently changed the option risk premium.</p>
-            <img src="assets/figures/fig_intermediary_option_pricing.png" alt="Figure 1 of the paper: cumulative returns of S&amp;P 500 put options, weeknights versus weekends, 1996 to 2023.">
           </div>
         </li>
       </ul>
