@@ -4,13 +4,11 @@
    =========================================================================== */
 
 :root {
-  --ink:    #1c1c1c;   /* body text            */
-  --navy:   #00274c;   /* Michigan navy — name & headings */
-  --link:   #11539e;   /* links                */
-  --link-h: #00274c;   /* link hover           */
-  --muted:  #6f6f6f;   /* secondary text       */
-  --rule:   #e7e7e7;   /* hairline rules       */
-  --maize:  #ffcb05;   /* Michigan maize accent */
+  --ink:    #1a1a1a;   /* body text, name, headings      */
+  --link:   #2c3e50;   /* links — quiet slate            */
+  --link-h: #1a1a1a;   /* link hover                     */
+  --muted:  #6f6f6f;   /* secondary text, section labels */
+  --rule:   #e7e7e7;   /* hairline rules                 */
   --maxw:   1000px;
 }
 
@@ -48,24 +46,24 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
   gap: .4rem 1rem;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
-  border-bottom: 2px solid var(--navy);
+  border-bottom: 1px solid var(--rule);
 }
 .site-title {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: .2px;
-  color: var(--navy);
+  color: var(--ink);
   border-bottom: none;
 }
-.site-title:hover { color: var(--navy); border-bottom: none; }
+.site-title:hover { color: var(--ink); border-bottom: none; }
 
 .site-nav { display: flex; gap: 1.4rem; font-size: 1.02rem; }
 .site-nav a { color: var(--muted); border-bottom: none; padding-bottom: 2px; }
-.site-nav a:hover { color: var(--navy); border-bottom: none; }
+.site-nav a:hover { color: var(--ink); border-bottom: none; }
 .site-nav a.active {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 600;
-  border-bottom: 2px solid var(--maize);
+  border-bottom: 2px solid var(--ink);
 }
 
 /* ---- Home: profile block ------------------------------------------------ */
@@ -83,7 +81,7 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 .profile h1 {
   margin: .1rem 0 .15rem;
   font-size: 1.9rem;
-  color: var(--navy);
+  color: var(--ink);
   line-height: 1.15;
 }
 .profile .subtitle { margin: 0; color: var(--ink); font-weight: 600; }
@@ -115,11 +113,12 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 /* ---- Section headings --------------------------------------------------- */
 section { margin-top: 2.6rem; }
 h2 {
-  font-size: 1.18rem;
-  color: var(--navy);
-  margin: 0 0 1rem;
-  padding-bottom: .35rem;
-  border-bottom: 1px solid var(--rule);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .9rem;
 }
 
 /* ---- Publication list --------------------------------------------------- */
@@ -163,7 +162,7 @@ h2 {
   margin-top: .6rem;
   padding: .65rem .85rem;
   background: #f6f7f9;
-  border-left: 3px solid var(--navy);
+  border-left: 3px solid #d8d8d8;
   border-radius: 0 4px 4px 0;
   font-size: .95rem;
   line-height: 1.62;
@@ -179,7 +178,7 @@ h2 {
   margin-top: .6rem;
   padding: .8rem .85rem;
   background: #f6f7f9;
-  border-left: 3px solid var(--navy);
+  border-left: 3px solid #d8d8d8;
   border-radius: 0 4px 4px 0;
   max-width: 64ch;
 }
@@ -196,9 +195,9 @@ h2 {
 /* Brief highlight when an abstract is revealed from an inline bio link */
 @keyframes abstract-flash {
   0%   { background: #f6f7f9; }
-  15%  { background: #fff3bf; }
+  15%  { background: #e8e8e8; }
   40%  { background: #f6f7f9; }
-  60%  { background: #fff3bf; }
+  60%  { background: #e8e8e8; }
   100% { background: #f6f7f9; }
 }
 .abstract.flash { animation: abstract-flash 1.4s ease-out; }
