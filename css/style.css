@@ -121,6 +121,16 @@ h2 {
   margin: 0 0 .9rem;
 }
 
+/* Large page title on subpages (Discussions, Data) — overrides the small
+   uppercase section-label look of plain h2 */
+h2.page-title {
+  font-size: 1.6rem;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--ink);
+  margin: 0 0 .4rem;
+}
+
 /* ---- Publication list --------------------------------------------------- */
 .pub-list { list-style: none; margin: 0; padding: 0; }
 .pub-list > li { margin-bottom: 1.5rem; }
