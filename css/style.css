@@ -71,7 +71,7 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
   display: flex;
   gap: 1.8rem;
   align-items: flex-start;
-  margin-bottom: 2.2rem;
+  margin-bottom: 3.4rem;
 }
 .profile img {
   width: 248px;   /* sized so the photo matches the height of the text column */
