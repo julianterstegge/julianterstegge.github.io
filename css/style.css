@@ -89,7 +89,7 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 .profile .bio { margin: .6rem 0 0; }
 .bio p { margin: 0; }
 .bio p + p { margin-top: .55rem; }
-.bio .area-head { margin-top: 1.1rem; }
+.bio .bio-block { margin-top: 1.1rem; }
 .bio .research-areas { margin: .35rem 0 .6rem; padding-left: 1.35rem; }
 .bio .research-areas li { margin: .12rem 0; }
 
@@ -104,7 +104,7 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 
 /* inline quick-links row */
 .quicklinks {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: .97rem;
   line-height: 1.9;
 }
