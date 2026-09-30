@@ -137,7 +137,7 @@ h2.page-title {
 .pub-list > li {
   margin-bottom: 1.1rem;
   padding: 1rem 1.2rem;
-  background: #edf2f8;   /* faint blue card, delineates each paper */
+  background: #e6edf5;   /* faint blue card, delineates each paper */
   border-radius: 8px;
 }
 .pub-title { font-weight: 600; color: var(--ink); }
@@ -234,7 +234,7 @@ h2.page-title {
   counter-increment: disc;
   padding: 1rem 1.2rem 1rem 3.4rem;
   margin-bottom: 1.1rem;
-  background: #edf2f8;   /* same faint blue card as the paper lists */
+  background: #e6edf5;   /* same faint blue card as the paper lists */
   border-radius: 8px;
 }
 .discussion-list > li::before {
