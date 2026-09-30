@@ -232,14 +232,16 @@ h2.page-title {
 .discussion-list > li {
   position: relative;
   counter-increment: disc;
-  padding-left: 2.4rem;
-  margin-bottom: 1.7rem;
+  padding: 1rem 1.2rem 1rem 3.4rem;
+  margin-bottom: 1.1rem;
+  background: #f5f8fb;   /* same faint blue card as the paper lists */
+  border-radius: 8px;
 }
 .discussion-list > li::before {
   content: counter(disc) ".";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1.2rem;
+  top: 1rem;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
   font-weight: 600;
@@ -266,6 +268,8 @@ h2.page-title {
 @media (max-width: 560px) {
   body { font-size: 16px; padding-top: 1.6rem; }
   .pub-list > li { padding: .85rem .95rem; }
+  .discussion-list > li { padding: .85rem .95rem .85rem 2.75rem; }
+  .discussion-list > li::before { left: .95rem; top: .85rem; }
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile img { width: 200px; }
   .quicklinks { text-align: center; }
