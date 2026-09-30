@@ -93,6 +93,11 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
 .bio .research-areas { margin: .35rem 0 .6rem; padding-left: 1.35rem; }
 .bio .research-areas li { margin: .12rem 0; }
 
+/* Minimalist position/education timeline — same list rhythm as the
+   enumerations above it; years muted, after the description */
+.bio .timeline { margin-top: 1.5rem; }
+.bio .tl-years { color: var(--muted); }
+
 /* Superscript paper references in the bio — click scrolls to the paper and
    reveals its abstract (see the .reveal-abstract script in index.html) */
 .bio sup {
