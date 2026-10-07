@@ -271,6 +271,8 @@ h2.page-title {
   .discussion-list > li::before { left: .95rem; top: .85rem; }
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile img { width: 200px; }
+  /* bio stays left-aligned: centered li text strands the outside list markers */
+  .profile .bio { text-align: left; }
   .quicklinks { text-align: center; }
   .site-header { justify-content: center; text-align: center; }
 }
