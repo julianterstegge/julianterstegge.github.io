@@ -226,26 +226,15 @@ h2.page-title {
 .discussion-intro { color: var(--muted); margin: -.4rem 0 1.8rem; }
 .discussion-list {
   list-style: none;
-  counter-reset: disc;
   margin: 0;
   padding: 0;
 }
 .discussion-list > li {
   position: relative;
-  counter-increment: disc;
-  padding: 1rem 1.2rem 1rem 3.4rem;
+  padding: 1rem 1.2rem;
   margin-bottom: 1.1rem;
   background: #e6edf5;   /* same faint blue card as the paper lists */
   border-radius: 8px;
-}
-.discussion-list > li::before {
-  content: counter(disc) ".";
-  position: absolute;
-  left: 1.2rem;
-  top: 1rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
 }
 .disc-paper   { font-weight: 600; color: var(--ink); }
 .disc-authors { color: var(--ink); }
@@ -269,8 +258,7 @@ h2.page-title {
 @media (max-width: 560px) {
   body { font-size: 16px; padding-top: 1.6rem; }
   .pub-list > li { padding: .85rem .95rem; }
-  .discussion-list > li { padding: .85rem .95rem .85rem 2.75rem; }
-  .discussion-list > li::before { left: .95rem; top: .85rem; }
+  .discussion-list > li { padding: .85rem .95rem; }
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile img { width: 200px; }
   /* bio stays left-aligned: centered li text strands the outside list markers */
