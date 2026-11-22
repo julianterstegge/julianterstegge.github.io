@@ -143,6 +143,9 @@ h2.page-title {
 }
 .pub-title { font-weight: 600; color: var(--ink); }
 .pub-formerly { color: var(--muted); font-size: .9rem; font-style: italic; }
+/* One-sentence paper summary after the title — light grey, led by a double
+   arrow; wraps as ordinary inline text on narrow screens */
+.pub-oneliner { color: #8a8a8a; font-size: .95rem; }
 .pub-meta  { color: var(--muted); font-size: .96rem; }
 .pub-meta em { font-style: italic; }
 
