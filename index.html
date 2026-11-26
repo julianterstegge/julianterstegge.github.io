@@ -58,10 +58,10 @@
           </ul>
           <p class="bio-block">Studied across markets:</p>
           <ul class="research-areas">
-            <li>Equities <a href="#paper-payoff" class="reveal-abstract see-here" data-target="abs-payoff" title="The Third Friday Price Spike">(see here)</a></li>
-            <li>Derivatives <a href="#paper-intermediary" class="reveal-abstract see-here" data-target="abs-intermediary" title="Intermediary Option Pricing">(see here)</a></li>
-            <li>Emissions <a href="#paper-carbonvix" class="reveal-abstract see-here" data-target="abs-carbonvix" title="Carbon VIX: Carbon Price Uncertainty and Decarbonization Investments">(see here)</a></li>
-            <li>Real Estate <a href="#paper-landbanking" class="reveal-abstract see-here" data-target="abs-landbanking" title="Land Banking and Housing Supply">(see here)</a></li>
+            <li>Equities</li>
+            <li>Derivatives</li>
+            <li>Emissions</li>
+            <li>Real Estate</li>
           </ul>
           <p class="bio-block">Background:</p>
           <ul class="research-areas">
@@ -182,23 +182,6 @@
       } else {
         btn.textContent = open ? 'Hide abstract' : 'Abstract';
       }
-    });
-
-    // Inline bio links that reveal, scroll to, and highlight a paper's abstract
-    document.addEventListener('click', function (e) {
-      var link = e.target.closest('.reveal-abstract');
-      if (!link) return;
-      e.preventDefault();
-      var panel = document.getElementById(link.getAttribute('data-target'));
-      if (!panel) return;
-      var li = panel.closest('li');
-      panel.classList.add('open');
-      var btn = li && li.querySelector('.abstract-toggle');
-      if (btn) { btn.setAttribute('aria-expanded', 'true'); btn.textContent = 'Hide abstract'; }
-      (li || panel).scrollIntoView({ behavior: 'smooth', block: 'center' });
-      panel.classList.remove('flash');
-      void panel.offsetWidth; // restart the animation
-      panel.classList.add('flash');
     });
   </script>
 
